@@ -12,6 +12,37 @@ const Project = () => {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
+      // for 'work' and '25''
+      const titles = [cardRef.current[0], cardRef.current[1]];
+
+      titles.forEach((title, i) => {
+        if (!title) return;
+
+        const chars = title.textContent.split("");
+        title.innerHTML = chars
+          .map(
+            (c) =>
+              `<span class="inline-block translate-y-[100%] opacity-0">${c}</span>`
+          )
+          .join("");
+
+        const letters = title.querySelectorAll("span");
+
+        gsap.to(letters, {
+          y: 0,
+          opacity: 1,
+          stagger: 0.05,
+          duration: 0.8,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: title,
+            start: "top 85%",
+            toggleActions: "play none none reverse",
+          },
+        });
+      });
+
+      // for every project container
       cardRef.current.forEach((card, i) => {
         gsap.fromTo(
           card,
@@ -19,7 +50,7 @@ const Project = () => {
           {
             opacity: 1,
             y: 0,
-            duration: 1,
+            duration: 0.5,
             delay: i * 0.2,
             ease: "power3.out",
             scrollTrigger: {
