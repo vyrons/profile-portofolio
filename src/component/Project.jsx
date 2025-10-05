@@ -63,7 +63,7 @@ const Project = () => {
                   opacity: 1,
                   y: 0,
                   duration: 1,
-                  delay: i * 0.2,
+                  delay: i * 0.1,
                 }),
               onLeaveBack: () =>
                 gsap.to(card, { opacity: 0, y: 80, duration: 0.8 }),
@@ -214,178 +214,232 @@ const Project = () => {
               </h1>
             </div>
             <div className="flex justify-center">
-              <div className="bg-zinc-800 w-[1180px] rounded-lg mt-5 h-[650px] mb-3">
+              <div className="bg-zinc-800 w-[1180px] rounded-lg mt-5 h-auto mb-3">
                 {/* Project 3 */}
-                <div
-                  className="flex mt-10 ml-5"
-                  ref={(el) => (cardRef.current[5] = el)}
-                >
-                  <div className="flex gap-[200px]">
-                    <div>
-                      <h1 className="text-white font-geistmono-regular text-1xl">
-                        01
-                      </h1>
-                    </div>
-
-                    <div>
-                      <h1 className="text-white font-geist-medium font-bold text-4xl">
-                        YOURFIT
-                      </h1>
-                    </div>
-
-                    <div className="flex justify-content">
-                      <div class="w-[250px] p-4 rounded-lg">
-                        <h1 className="text-white font-geistmono-regular">
-                          ONLINE OUTFIT SHOP
+                <a href="https://xzeonz.github.io/Yourfit-Outfit-Shop/">
+                  <div
+                    className="flex mt-10 ml-5 p-10"
+                    ref={(el) => (cardRef.current[5] = el)}
+                  >
+                    <div className="flex gap-[200px]">
+                      <div>
+                        <h1 className="text-white font-geistmono-regular text-1xl">
+                          01
                         </h1>
-                        <div class="flex flex-wrap gap-2">
-                          <span class="bg-stone-100 text-black text-xs font-geistmono-light px-3 py-0.5 rounded-md">
-                            WEB
-                          </span>
-                          <span class="bg-stone-600 text-white text-xs font-geistmono-light px-3 py-0.5 rounded-md">
-                            HTML
-                          </span>
-                          <span class="bg-stone-600 text-white text-xs font-geistmono-light px-3 py-0.5 rounded-md">
-                            CSS
-                          </span>
-                          <span class="bg-stone-600 text-white text-xs font-geistmono-light px-3 py-0.5 rounded-md">
-                            JS
-                          </span>
-                        </div>
                       </div>
 
-                      <div className="ml-20">
-                        <img
-                          src="/img/project3.jpeg"
-                          alt="project3"
-                          className="w-[200px] rounded-lg"
-                        />
+                      <div>
+                        <h1 className="text-white font-geist-medium font-bold text-4xl">
+                          YOURFIT
+                        </h1>
+                      </div>
+
+                      <div className="flex justify-content">
+                        <div class="w-[250px] p-4 rounded-lg">
+                          <h1 className="text-white font-geistmono-regular">
+                            ONLINE OUTFIT SHOP
+                          </h1>
+                          <div class="flex flex-wrap gap-2">
+                            <span class="bg-stone-100 text-black text-xs font-geistmono-light px-3 py-0.5 rounded-md">
+                              WEB
+                            </span>
+                            <span class="bg-stone-600 text-white text-xs font-geistmono-light px-3 py-0.5 rounded-md">
+                              HTML
+                            </span>
+                            <span class="bg-stone-600 text-white text-xs font-geistmono-light px-3 py-0.5 rounded-md">
+                              CSS
+                            </span>
+                            <span class="bg-stone-600 text-white text-xs font-geistmono-light px-3 py-0.5 rounded-md">
+                              JS
+                            </span>
+                          </div>
+                        </div>
+
+                        <div className="ml-20">
+                          <img
+                            src="/img/project3.jpeg"
+                            alt="project3"
+                            className="w-[200px] rounded-lg"
+                          />
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
+                </a>
 
                 <div className="h-[1px] w-auto bg-zinc-700 mt-10"></div>
 
                 {/* Project 4 */}
-                <div
-                  className="flex mt-10 ml-5"
-                  ref={(el) => (cardRef.current[6] = el)}
-                >
-                  <div className="flex gap-[200px]">
-                    <div>
-                      <h1 className="text-white font-geistmono-regular text-1xl">
-                        02
-                      </h1>
-                    </div>
-
-                    <div>
-                      <h1 className="text-white font-geist-medium font-bold text-4xl">
-                        RASKITA
-                      </h1>
-                    </div>
-
-                    <div className="flex justify-content">
-                      <div class="w-[250px] p-4 rounded-lg">
-                        <h1 className="text-white font-geistmono-regular">
-                          CAT AND DOG BREED CLASSIFIER
+                <a href="https://github.com/xzeonz/RasKita-1.1.0.git">
+                  <div
+                    className="flex mt-10 ml-5 p-10"
+                    ref={(el) => (cardRef.current[6] = el)}
+                  >
+                    <div className="flex gap-[200px]">
+                      <div>
+                        <h1 className="text-white font-geistmono-regular text-1xl">
+                          02
                         </h1>
-                        <div class="flex flex-wrap gap-2">
-                          <span class="bg-stone-100 text-black text-xs font-geistmono-light px-3 py-0.5 rounded-md">
-                            WEB
-                          </span>
-                          <span class="bg-stone-100 text-black text-xs font-geistmono-light px-3 py-0.5 rounded-md">
-                            EFFICIENTNET_B0
-                          </span>
-                          <span class="bg-stone-100 text-black text-xs font-geistmono-light px-3 py-0.5 rounded-md">
-                            MACHINE LEARNING
-                          </span>
-                          <span class="bg-stone-600 text-white text-xs font-geistmono-light px-3 py-0.5 rounded-md">
-                            PYTHON
-                          </span>
-                          <span class="bg-stone-600 text-white text-xs font-geistmono-light px-3 py-0.5 rounded-md">
-                            HTML
-                          </span>
-                          <span class="bg-stone-600 text-white text-xs font-geistmono-light px-3 py-0.5 rounded-md">
-                            CSS
-                          </span>
-                          <span class="bg-stone-600 text-white text-xs font-geistmono-light px-3 py-0.5 rounded-md">
-                            JS
-                          </span>
-                          <span class="bg-stone-600 text-white text-xs font-geistmono-light px-3 py-0.5 rounded-md">
-                            SQLITE
-                          </span>
-                          <span class="bg-stone-600 text-white text-xs font-geistmono-light px-3 py-0.5 rounded-md">
-                            FASTAPI
-                          </span>
-                        </div>
                       </div>
 
-                      <div className="ml-20">
-                        <img
-                          src="/img/project4.jpeg"
-                          alt="project3"
-                          className="w-[200px] rounded-lg"
-                        />
+                      <div>
+                        <h1 className="text-white font-geist-medium font-bold text-4xl">
+                          RASKITA
+                        </h1>
+                      </div>
+
+                      <div className="flex justify-content">
+                        <div class="w-[250px] p-4 rounded-lg">
+                          <h1 className="text-white font-geistmono-regular">
+                            CAT AND DOG BREED CLASSIFIER
+                          </h1>
+                          <div class="flex flex-wrap gap-2">
+                            <span class="bg-stone-100 text-black text-xs font-geistmono-light px-3 py-0.5 rounded-md">
+                              WEB
+                            </span>
+                            <span class="bg-stone-100 text-black text-xs font-geistmono-light px-3 py-0.5 rounded-md">
+                              EFFICIENTNET_B0
+                            </span>
+                            <span class="bg-stone-100 text-black text-xs font-geistmono-light px-3 py-0.5 rounded-md">
+                              MACHINE LEARNING
+                            </span>
+                            <span class="bg-stone-600 text-white text-xs font-geistmono-light px-3 py-0.5 rounded-md">
+                              PYTHON
+                            </span>
+                            <span class="bg-stone-600 text-white text-xs font-geistmono-light px-3 py-0.5 rounded-md">
+                              HTML
+                            </span>
+                            <span class="bg-stone-600 text-white text-xs font-geistmono-light px-3 py-0.5 rounded-md">
+                              CSS
+                            </span>
+                            <span class="bg-stone-600 text-white text-xs font-geistmono-light px-3 py-0.5 rounded-md">
+                              JS
+                            </span>
+                            <span class="bg-stone-600 text-white text-xs font-geistmono-light px-3 py-0.5 rounded-md">
+                              SQLITE
+                            </span>
+                            <span class="bg-stone-600 text-white text-xs font-geistmono-light px-3 py-0.5 rounded-md">
+                              FASTAPI
+                            </span>
+                          </div>
+                        </div>
+
+                        <div className="ml-20">
+                          <img
+                            src="/img/project4.jpeg"
+                            alt="project3"
+                            className="w-[200px] rounded-lg"
+                          />
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
+                </a>
 
                 <div className="h-[1px] w-auto bg-zinc-700 mt-10"></div>
 
                 {/* Project 5 */}
-                <div
-                  className="flex mt-10 ml-5"
-                  ref={(el) => (cardRef.current[7] = el)}
-                >
-                  <div className="flex gap-[200px]">
-                    <div>
-                      <h1 className="text-white font-geistmono-regular text-1xl">
-                        03
-                      </h1>
-                    </div>
-
-                    <div>
-                      <h1 className="text-white font-geist-medium font-bold text-4xl">
-                        DIGIARCH
-                      </h1>
-                    </div>
-
-                    <div className="flex justify-content">
-                      <div class="w-[250px] p-4 rounded-lg">
-                        <h1 className="text-white font-geistmono-regular">
-                          MINI DIGIMON JS FETCH API PROJECT
+                <a href="https://codesandbox.io/p/sandbox/modest-gould-lsry2h">
+                  <div
+                    className="flex mt-10 ml-5 p-10"
+                    ref={(el) => (cardRef.current[7] = el)}
+                  >
+                    <div className="flex gap-[200px]">
+                      <div>
+                        <h1 className="text-white font-geistmono-regular text-1xl">
+                          03
                         </h1>
-                        <div class="flex flex-wrap gap-2">
-                          <span class="bg-stone-100 text-black text-xs font-geistmono-light px-3 py-0.5 rounded-md">
-                            WEB
-                          </span>
-                          <span class="bg-stone-100 text-black text-xs font-geistmono-light px-3 py-0.5 rounded-md">
-                            FETCH API
-                          </span>
-                          <span class="bg-stone-600 text-white text-xs font-geistmono-light px-3 py-0.5 rounded-md">
-                            HTML
-                          </span>
-                          <span class="bg-stone-600 text-white text-xs font-geistmono-light px-3 py-0.5 rounded-md">
-                            CSS
-                          </span>
-                          <span class="bg-stone-600 text-white text-xs font-geistmono-light px-3 py-0.5 rounded-md">
-                            JS
-                          </span>
-                        </div>
                       </div>
 
-                      <div className="ml-20">
-                        <img
-                          src="/img/project5.jpeg"
-                          alt="project3"
-                          className="w-[200px] rounded-lg"
-                        />
+                      <div>
+                        <h1 className="text-white font-geist-medium font-bold text-4xl">
+                          DIGIARCH
+                        </h1>
+                      </div>
+
+                      <div className="flex justify-content">
+                        <div class="w-[250px] p-4 rounded-lg">
+                          <h1 className="text-white font-geistmono-regular">
+                            MINI DIGIMON JS FETCH API PROJECT
+                          </h1>
+                          <div class="flex flex-wrap gap-2">
+                            <span class="bg-stone-100 text-black text-xs font-geistmono-light px-3 py-0.5 rounded-md">
+                              WEB
+                            </span>
+                            <span class="bg-stone-100 text-black text-xs font-geistmono-light px-3 py-0.5 rounded-md">
+                              FETCH API
+                            </span>
+                            <span class="bg-stone-600 text-white text-xs font-geistmono-light px-3 py-0.5 rounded-md">
+                              HTML
+                            </span>
+                            <span class="bg-stone-600 text-white text-xs font-geistmono-light px-3 py-0.5 rounded-md">
+                              CSS
+                            </span>
+                            <span class="bg-stone-600 text-white text-xs font-geistmono-light px-3 py-0.5 rounded-md">
+                              JS
+                            </span>
+                          </div>
+                        </div>
+
+                        <div className="ml-20">
+                          <img
+                            src="/img/project5.jpeg"
+                            alt="project3"
+                            className="w-[200px] rounded-lg"
+                          />
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
+                </a>
+
+                <div className="h-[1px] w-auto bg-zinc-700 mt-10"></div>
+
+                {/* Project 6 */}
+                <a href="https://your-note-psi.vercel.app/notes">
+                  <div
+                    className="flex mt-10 ml-5 p-10"
+                    ref={(el) => (cardRef.current[8] = el)}
+                  >
+                    <div className="flex gap-[200px]">
+                      <div>
+                        <h1 className="text-white font-geistmono-regular text-1xl">
+                          04
+                        </h1>
+                      </div>
+
+                      <div>
+                        <h1 className="text-white font-geist-medium font-bold text-4xl">
+                          YOURNOTE.
+                        </h1>
+                      </div>
+
+                      <div className="flex justify-content">
+                        <div class="w-[250px] p-4 rounded-lg">
+                          <h1 className="text-white font-geistmono-regular">
+                            Notes Project
+                          </h1>
+                          <div class="flex flex-wrap gap-2">
+                            <span class="bg-stone-100 text-black text-xs font-geistmono-light px-3 py-0.5 rounded-md">
+                              WEB
+                            </span>
+                            <span class="bg-stone-600 text-white text-xs font-geistmono-light px-3 py-0.5 rounded-md">
+                              NEXT JS
+                            </span>
+                          </div>
+                        </div>
+
+                        <div className="ml-20">
+                          <img
+                            src="/img/project6.jpeg"
+                            alt="project3"
+                            className="w-[200px] rounded-lg"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
               </div>
             </div>
           </div>
