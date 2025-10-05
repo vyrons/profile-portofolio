@@ -103,7 +103,7 @@ const TechStack = () => {
           y: rect.top + window.scrollY,
           width: rect.width,
           height: rect.height,
-          opacity: 0.25,
+          opacity: 1,
           scale: 1,
           ease: "power3.out",
           duration: 0.4,
@@ -156,19 +156,19 @@ const TechStack = () => {
         <div className="flex justify-center mt-5 pl-10 pr-10 relative z-20">
           <div
             ref={(el) => (logoRef.current[0] = el)}
-            className="flex justify-center items-center h-[240px] w-[400px] border-zinc-300 border-2 border-r-0 border-l-0 border-t-0 "
+            className="group flex justify-center items-center h-[240px] w-[400px] border-zinc-300 border-2 border-r-0 border-l-0 border-t-0 "
           >
             <TechStackLogo stack={[{ name: "React", icon: "react" }]} />
           </div>
           <div
             ref={(el) => (logoRef.current[1] = el)}
-            className="flex justify-center items-center h-[240px] w-[400px] border-zinc-300 border-2 border-t-0"
+            className="group flex justify-center items-center h-[240px] w-[400px] border-zinc-300 border-2 border-t-0"
           >
             <TechStackLogo stack={[{ name: "Next.js", icon: "nextdotjs" }]} />
           </div>
           <div
             ref={(el) => (logoRef.current[2] = el)}
-            className="flex justify-center items-center h-[240px] w-[400px] border-zinc-300 border-2 border-l-0 border-r-0 border-t-0"
+            className="group flex justify-center items-center h-[240px] w-[400px] border-zinc-300 border-2 border-l-0 border-r-0 border-t-0"
           >
             <TechStackLogo
               stack={[{ name: "Javascript", icon: "javascript" }]}
@@ -194,7 +194,7 @@ const TechStack = () => {
           {/* container set  2 */}
           <div
             ref={(el) => (logoRef.current[3] = el)}
-            className="flex justify-center items-center h-[190px] w-[400px] border-zinc-300 border-2 border-t-0 border-r-0 border-b-0"
+            className="group flex justify-center items-center h-[190px] w-[400px] border-zinc-300 border-2 border-t-0 border-r-0 border-b-0 z-20"
           >
             <TechStackLogo
               stack={[{ name: "Tailwind", icon: "tailwindcss" }]}
@@ -202,37 +202,37 @@ const TechStack = () => {
           </div>
           <div
             ref={(el) => (logoRef.current[4] = el)}
-            className="flex justify-center items-center h-[190px] w-[400px] border-zinc-300 border-2 border-t-0 border-r-0 border-b-0"
+            className="group flex justify-center items-center h-[190px] w-[400px] border-zinc-300 border-2 border-t-0 border-r-0 border-b-0 z-20"
           >
             <TechStackLogo stack={[{ name: "GSAP", icon: "gsap" }]} />
           </div>
           <div
             ref={(el) => (logoRef.current[5] = el)}
-            className="flex justify-center items-center h-[190px] w-[400px] border-zinc-300 border-2 border-t-0 border-r-0 border-b-0"
+            className="group flex justify-center items-center h-[190px] w-[400px] border-zinc-300 border-2 border-t-0 border-r-0 border-b-0 z-20"
           >
             <TechStackLogo stack={[{ name: "Bun", icon: "bun" }]} />
           </div>
           <div
             ref={(el) => (logoRef.current[6] = el)}
-            className="flex justify-center items-center h-[190px] w-[400px] border-zinc-300 border-2 border-t-0 border-r-0 border-b-0"
+            className="group flex justify-center items-center h-[190px] w-[400px] border-zinc-300 border-2 border-t-0 border-r-0 border-b-0 z-20"
           >
             <TechStackLogo stack={[{ name: "Vercel", icon: "vercel" }]} />
           </div>
           <div
             ref={(el) => (logoRef.current[7] = el)}
-            className="flex justify-center items-center h-[190px] w-[400px] border-zinc-300 border-2 border-t-0 border-r-0 border-b-0"
+            className="group flex justify-center items-center h-[190px] w-[400px] border-zinc-300 border-2 border-t-0 border-r-0 border-b-0 z-20"
           >
             <TechStackLogo stack={[{ name: "NPM", icon: "npm" }]} />
           </div>
           <div
             ref={(el) => (logoRef.current[8] = el)}
-            className="flex justify-center items-center h-[190px] w-[400px] border-zinc-300 border-2 border-t-0 border-r-0 border-b-0"
+            className="group flex justify-center items-center h-[190px] w-[400px] border-zinc-300 border-2 border-t-0 border-r-0 border-b-0 z-20"
           >
             <TechStackLogo stack={[{ name: "Vite", icon: "vite" }]} />
           </div>
           <div
             ref={(el) => (logoRef.current[9] = el)}
-            className="flex justify-center items-center h-[190px] w-[400px] border-zinc-300 border-2 border-t-0 border-b-0"
+            className="group flex justify-center items-center h-[190px] w-[400px] border-zinc-300 border-2 border-t-0 border-b-0 z-20"
           >
             <TechStackLogo stack={[{ name: "Figma", icon: "figma" }]} />
           </div>
