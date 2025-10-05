@@ -396,7 +396,7 @@ const Project = () => {
                 <div className="h-[1px] w-auto bg-zinc-700 mt-10"></div>
 
                 {/* Project 6 */}
-                <a href="https://your-note-psi.vercel.app/notes">
+                <a href="https://your-note-psi.vercel.app/">
                   <div
                     className="flex mt-10 ml-5 p-10"
                     ref={(el) => (cardRef.current[8] = el)}
