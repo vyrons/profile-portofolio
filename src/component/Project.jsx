@@ -219,7 +219,6 @@ const Project = () => {
                 <a href="https://xzeonz.github.io/Yourfit-Outfit-Shop/">
                   <div
                     className="flex mt-10 ml-5 p-10"
-                    ref={(el) => (cardRef.current[5] = el)}
                   >
                     <div className="flex gap-[200px]">
                       <div>
@@ -273,7 +272,6 @@ const Project = () => {
                 <a href="https://github.com/xzeonz/RasKita-1.1.0.git">
                   <div
                     className="flex mt-10 ml-5 p-10"
-                    ref={(el) => (cardRef.current[6] = el)}
                   >
                     <div className="flex gap-[200px]">
                       <div>
@@ -342,7 +340,6 @@ const Project = () => {
                 <a href="https://codesandbox.io/p/sandbox/modest-gould-lsry2h">
                   <div
                     className="flex mt-10 ml-5 p-10"
-                    ref={(el) => (cardRef.current[7] = el)}
                   >
                     <div className="flex gap-[200px]">
                       <div>
@@ -397,10 +394,7 @@ const Project = () => {
 
                 {/* Project 6 */}
                 <a href="https://your-note-psi.vercel.app/">
-                  <div
-                    className="flex mt-10 ml-5 p-10"
-                    ref={(el) => (cardRef.current[8] = el)}
-                  >
+                  <div className="flex mt-10 ml-5 p-10">
                     <div className="flex gap-[200px]">
                       <div>
                         <h1 className="text-white font-geistmono-regular text-1xl">
