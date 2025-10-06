@@ -50,7 +50,7 @@ const AboutMe = () => {
 
   return (
     <section id="about">
-      <div className="flex items-center p-10">
+      <div className="flex justify-center p-10">
         <div className="mt-[200px]">
           <h1 className="font-geistmono-light text-[20px]">About Me</h1>
           <p ref={textRef} className="font-geist-medium font-bold text-3xl">
