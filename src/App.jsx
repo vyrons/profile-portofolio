@@ -4,6 +4,7 @@ import Navbar from './component/Navbar'
 import AboutMe from './component/AboutMe'
 import Project from './component/Project'
 import TechStack from './component/TechStack'
+import WhatIDo from './component/WhatIDo'
 
 const App = () => {
   return (
@@ -13,6 +14,7 @@ const App = () => {
       <AboutMe/>
       <Project/>
       <TechStack/>
+      <WhatIDo/>
     </main>
   )
 }
