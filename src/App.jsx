@@ -1,22 +1,38 @@
-import React from 'react'
-import Hero from './component/Hero'
-import Navbar from './component/Navbar'
-import AboutMe from './component/AboutMe'
-import Project from './component/Project'
-import TechStack from './component/TechStack'
-import WhatIDo from './component/WhatIDo'
+import React, { useEffect } from "react";
+import Hero from "./component/Hero";
+import Navbar from "./component/Navbar";
+import AboutMe from "./component/AboutMe";
+import Project from "./component/Project";
+import TechStack from "./component/TechStack";
+import WhatIDo from "./component/WhatIDo";
+import Lenis from "@studio-freight/lenis";
 
 const App = () => {
-  return (
-    <main>
-      <Navbar/>
-      <Hero/>
-      <AboutMe/>
-      <Project/>
-      <TechStack/>
-      <WhatIDo/>
-    </main>
-  )
-}
+  // Inisialisasi Lenis untuk smooth scroll
+  useEffect(() => {
+    const lenis = new Lenis();
 
-export default App
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
+  }, []); // <-- Array kosong memastikan ini hanya berjalan sekali
+
+  return (
+  <>
+  <Navbar />
+  <Hero />
+  <AboutMe />
+  <Project />
+  <TechStack />
+  <WhatIDo />
+  
+  </>
+    // <main>
+    // </main>
+  );
+};
+
+export default App;
