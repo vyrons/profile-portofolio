@@ -105,7 +105,7 @@ const WhatIDo = () => {
       <div className="flex justify-center mt-5">
         <div className="relative">
           <div className="h-[300px] w-[310px] ">
-            <img src="/img/whatido2.jpeg" alt="" className="whatido-img"/>
+            <img src="/img/whatido.jpeg" alt="" className="whatido-img"/>
           </div>
 
           <div className="absolute font-geist-regular italic top-5 left-[340px] w-[250px]">
