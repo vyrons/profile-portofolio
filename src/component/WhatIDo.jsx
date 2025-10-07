@@ -103,7 +103,7 @@ const WhatIDo = () => {
       </div>
 
       <div className="flex justify-center mt-5">
-        <div className="relative">
+        <div className="relative min-h-[600px]">
           <div className="h-[300px] w-[310px] ">
             <img src="/img/whatido.jpeg" alt="" className="whatido-img"/>
           </div>

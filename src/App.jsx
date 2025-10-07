@@ -6,6 +6,7 @@ import Project from "./component/Project";
 import TechStack from "./component/TechStack";
 import WhatIDo from "./component/WhatIDo";
 import Lenis from "@studio-freight/lenis";
+import Final from "./component/Final";
 
 const App = () => {
   // Inisialisasi Lenis untuk smooth scroll
@@ -28,6 +29,7 @@ const App = () => {
   <Project />
   <TechStack />
   <WhatIDo />
+  <Final/>
   
   </>
     // <main>
