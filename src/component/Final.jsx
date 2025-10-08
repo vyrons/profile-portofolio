@@ -5,28 +5,39 @@ import { ScrollTrigger } from "gsap/all";
 gsap.registerPlugin(ScrollTrigger);
 
 const Final = () => {
+  const sectionRef = useRef(null);
   const textRef = useRef(null);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      gsap.fromTo(
+      // Timeline for change color animate
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: sectionRef.current,
+          start: "top top",
+          end: "+=1000", // scroll duration when "pin" active
+          scrub: true,
+          pin: true,
+          anticipatePin: 1,
+        },
+      });
+
+      // Step 1: light -> dark (background)
+      tl.to(sectionRef.current, {
+        backgroundColor: "#0c0c0c",
+        duration: 1,
+        ease: "power2.inOut",
+      });
+
+      // Step 2: light -> dark (text)
+      tl.to(
         textRef.current,
         {
-          y: 100,
-          opacity: 0,
+          color: "#ffffff",
+          duration: 0.8,
+          ease: "power2.inOut",
         },
-        {
-          y: 0,
-          opacity: 1,
-          duration: 1.5,
-          ease: "power3.out",
-          scrollTrigger: {
-            trigger: textRef.current,
-            start: "top 85%",
-            end: "top 50%",
-            scrub: false,
-          },
-        }
+        "<" // berjalan bersamaan dgn background
       );
     });
 
@@ -34,14 +45,14 @@ const Final = () => {
   }, []);
 
   return (
-    <div className="flex items-center justify-center w-screen h-screen">
-      <h1 ref={textRef} className="text-xl">
-        we are{" "}
-        <span className="italic font-geistmono-regular">
-          NOVEL
-        </span>
+    <section
+      ref={sectionRef}
+      className="flex items-center justify-center w-screen h-screen"
+    >
+      <h1 ref={textRef} className="text-3xl text-black">
+        we are <span className="italic font-geistmono-regular">NOVEL</span>
       </h1>
-    </div>
+    </section>
   );
 };
 
