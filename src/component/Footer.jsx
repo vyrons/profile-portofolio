@@ -3,7 +3,7 @@ import { FaLinkedin, FaGithub, FaInstagram } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className="w-full bg-black text-white px-10 md:px-20 py-20 border-t border-gray-800">
+    <footer id="footer" className="w-full bg-black text-white px-10 md:px-20 py-20 border-t border-gray-800">
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-10">
         {/* Kiri - text */}
         <div>
