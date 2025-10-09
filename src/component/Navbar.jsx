@@ -52,8 +52,8 @@ const Navbar = () => {
       gsap.from(".hero-animate ", {
         y: 40,
         opacity: 0,
-        duration: 1,
-        stagger: 0.15,
+        duration: 1.5,
+        stagger: 0.28,
         ease: "power3.out",
       });
     }, navRef);
