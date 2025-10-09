@@ -7,33 +7,37 @@ import TechStack from "./component/TechStack";
 import WhatIDo from "./component/WhatIDo";
 import Lenis from "@studio-freight/lenis";
 import Final from "./component/Final";
-import Footer from "./component/Footer"
+import Footer from "./component/Footer";
+import { ScrollTrigger } from "gsap/all";
+import gsap from "gsap";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const App = () => {
   // Inisialisasi Lenis untuk smooth scroll
   useEffect(() => {
     const lenis = new Lenis();
 
-    function raf(time) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
+    lenis.on("scroll", ScrollTrigger.update);
 
-    requestAnimationFrame(raf);
+    gsap.ticker.add((time) => {
+      lenis.raf(time * 1000);
+    });
+
+    gsap.ticker.lagSmoothing(0);
   }, []); // <-- Array kosong memastikan ini hanya berjalan sekali
 
   return (
-  <>
-  <Navbar />
-  <Hero />
-  <AboutMe />
-  <Project />
-  <TechStack />
-  <WhatIDo />
-  <Final/>
-  <Footer/>
-  
-  </>
+    <>
+      <Navbar />
+      <Hero />
+      <AboutMe />
+      <Project />
+      <TechStack />
+      <WhatIDo />
+      <Final />
+      <Footer />
+    </>
     // <main>
     // </main>
   );
