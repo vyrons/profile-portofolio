@@ -116,7 +116,7 @@ const Hero = () => {
             </div>
 
             <span className="font-geistmono-regular mt-8 hidden md:block">
-              cool sh*t ↓
+              cool view ↓
             </span>
           </div>
         </div>
