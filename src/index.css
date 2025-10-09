@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: "General Sans";
+  width: 100dvw;
+  background-color: #f3f3f3;
+  overflow-x: hidden;
+}
+
+@layer base {
+  @font-face {
+    font-family: "geits-medium";
+    src: url("/fonts/Geits-Medium.woff2") format("woff2");
+  }
+
+  @font-face {
+    font-family: "geits-regular";
+    src: url("/fonts/Geits-Regular.woff2") format("woff2");
+  }
+
+  @font-face {
+    font-family: "geistmono-regular";
+    src: url("/fonts/GeitsMono-Regular.woff2") format("woff2");
+  }
+
+  @font-face {
+    font-family: "geitsmono-light";
+    src: url("/fonts/GeitsMono-Light.woff2") format("woff2");
+  }
+}
+
+@layer utilities {
+  .about-image {
+    @apply absolute left-1/2 top-0 z-20 h-[60vh] w-96 origin-center -translate-x-1/2 overflow-hidden rounded-3xl md:w-[30vw];
+  }
+
+  .mask-clip-path {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+
+  .floating-nav {
+    /* @apply rounded-lg border; */
+  }
+}
+
+.indicator-line {
+  @apply h-1 w-px rounded-full bg-black transition-all duration-200 ease-in-out;
+}
+
+.indicator-line.active {
+  animation: indicator-line 0.5s ease infinite;
+  animation-delay: calc(var(--animation-order) * 0.1s);
+}
+
+@keyframes indicator-line {
+  0% {
+    height: 4px;
+    transform: translateY(-0px);
+  }
+  50% {
+    height: 16px;
+    transform: translateY(-4px);
+  }
+  100% {
+    height: 4px;
+    transform: translateY(-0px);
+  }
+}
