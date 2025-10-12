@@ -15,7 +15,7 @@ const Footer = () => {
           </p>
         </div>
 
-        {/* Kanan - socials */}
+        {/* Kanan - sosmed */}
         <div className="flex flex-col items-start gap-4">
           <a
             href="https://www.linkedin.com/in/ryan-rafidhea-reyhan-439109211/"
@@ -56,7 +56,7 @@ const Footer = () => {
       </div>
 
       {/* Bawah copyright */}
-      <div className="border-t border-gray-800 mt-20 pt-6 flex justify-between text-xs text-gray-500 tracking-wide font-geist-regular">
+      <div className="border-t border-gray-800 mt-20 pt-6 flex flex-col md:flex-row justify-between text-xs text-gray-500 tracking-wide font-geist-regular">
         <p>© 2025 Ryan Rafidhea Reyhan. All rights reserved.</p>
         <p className="italic font-geistmono-regular">crafted with care</p>
       </div>

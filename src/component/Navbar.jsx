@@ -107,8 +107,8 @@ const Navbar = () => {
       ref={navRef}
       className="fixed flex justify-between items-center w-full px-8 py-4 text-sm font-medium z-[60]"
     >
-      <div className="flex gap-8">
-        <div className="hero-animate flex flex-col font-geist-regular">
+      <div className="flex gap-8 md:flex text-[10px] md:text-[13px]">
+        <div className="hero-animate flex flex-col font-geist-regular ">
           <span>Indo Based</span>
           <span className="text-gray-500">Web Dev Student</span>
         </div>
@@ -118,20 +118,22 @@ const Navbar = () => {
         </div>
         <div className="hero-animate flex flex-col font-geist-regular">
           <span>Internship availability</span>
-          <span className="text-gray-500">February 2025</span>
+          <span className="text-gray-500">February 2026</span>
         </div>
       </div>
 
       <div className="flex gap-5">
-        <Button
-          id="product-button"
-          title="Get Touch"
-          rightIcon={<TiLocationArrow />}
-          containerClass="hero-animate font-geist-regular bg-black text-white md:flex hidden items-center justify-center gap-1"
-        />
+        <a href="https://www.linkedin.com/in/ryan-rafidhea-reyhan-439109211/">
+          <Button
+            id="product-button"
+            title="Get Touch"
+            rightIcon={<TiLocationArrow />}
+            containerClass="hero-animate font-geist-regular bg-black text-white md:flex hidden items-center justify-center gap-1"
+          />
+        </a>
 
         <button
-          className="audio flex items-center space-x-0.5"
+          className="hero-animate audio flex items-center space-x-0.5"
           onClick={toggleAudioIndicator}
         >
           <audio

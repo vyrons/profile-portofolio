@@ -31,8 +31,10 @@ const App = () => {
     <>
       <Navbar />
       <Hero />
-      <AboutMe />
-      <Project />
+      <div className="relative z-20 bg-[#f3f3f3]">
+        <AboutMe />
+        <Project />
+      </div>
       <TechStack />
       <WhatIDo />
       <Final />
