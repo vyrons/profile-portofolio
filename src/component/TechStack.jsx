@@ -127,14 +127,16 @@ const TechStack = () => {
       <div className="flex justify-center overflow-hidden">
         <h1
           ref={textRef}
-          className="text-[150px] font-geist-medium font-bold text-black overflow-hidden"
+          className="text-[50px] md:text-[120px] lg:text-[140px] font-geist-medium font-bold text-black overflow-hidden"
         >
           TECH STACK
         </h1>
       </div>
 
-      <div className="pl-10 mt-20">
-        <h1 className="font-geistmono-light">WHAT I WORK WITH</h1>
+      <div className="md:pl-10 mt-20">
+        <h1 className="font-geistmono-light flex justify-center md:flex-col">
+          WHAT I WORK WITH
+        </h1>
       </div>
 
       <div>
@@ -153,22 +155,22 @@ const TechStack = () => {
         ></div>
 
         {/* first set container */}
-        <div className="flex justify-center mt-5 pl-10 pr-10 relative z-20">
+        <div className="flex justify-center mt-5 items-center relative z-20 flex-col md:flex-row">
           <div
             ref={(el) => (logoRef.current[0] = el)}
-            className="group flex justify-center items-center h-[240px] w-[400px] border-zinc-300 border-2 border-r-0 border-l-0 border-t-0 "
+            className="group flex justify-center items-center h-[240px] w-[400px] border-zinc-300 border-2 border-r-0 border-l-0 border-t-0 border-b-0 md:border-b-2"
           >
             <TechStackLogo stack={[{ name: "React", icon: "react" }]} />
           </div>
           <div
             ref={(el) => (logoRef.current[1] = el)}
-            className="group flex justify-center items-center h-[240px] w-[400px] border-zinc-300 border-2 border-t-0"
+            className="group flex justify-center items-center h-[240px] w-[400px] border-zinc-300 border-2 border-t-0 md:border-l-2 md:border-r-2 border-l-0 border-r-0 md:border-b-2 border-b-0"
           >
             <TechStackLogo stack={[{ name: "Next.js", icon: "nextdotjs" }]} />
           </div>
           <div
             ref={(el) => (logoRef.current[2] = el)}
-            className="group flex justify-center items-center h-[240px] w-[400px] border-zinc-300 border-2 border-l-0 border-r-0 border-t-0"
+            className="group flex justify-center items-center h-[240px] w-[400px] border-zinc-300 border-2 border-l-0 border-r-0 border-t-0 border-b-0 md:border-b-2"
           >
             <TechStackLogo
               stack={[{ name: "Javascript", icon: "javascript" }]}
@@ -176,7 +178,7 @@ const TechStack = () => {
           </div>
         </div>
 
-        <div className="flex justify-center">
+        <div className="flex justify-center items-center flex-col md:flex-row">
           {/* hightliggt */}
           <div
             ref={highlightRef}
@@ -194,7 +196,7 @@ const TechStack = () => {
           {/* container set  2 */}
           <div
             ref={(el) => (logoRef.current[3] = el)}
-            className="group flex justify-center items-center h-[190px] w-[400px] border-zinc-300 border-2 border-t-0 border-r-0 border-b-0 z-20"
+            className="group flex justify-center items-center h-[190px] w-[400px] border-zinc-300 border-2 border-t-0 border-r-0 border-b-0 z-20 border-l-0"
           >
             <TechStackLogo
               stack={[{ name: "Tailwind", icon: "tailwindcss" }]}
@@ -202,37 +204,37 @@ const TechStack = () => {
           </div>
           <div
             ref={(el) => (logoRef.current[4] = el)}
-            className="group flex justify-center items-center h-[190px] w-[400px] border-zinc-300 border-2 border-t-0 border-r-0 border-b-0 z-20"
+            className="group flex justify-center items-center h-[190px] w-[400px] border-zinc-300 border-2 border-t-0 border-r-0 border-b-0 z-20 border-l-0 md:border-l-2"
           >
             <TechStackLogo stack={[{ name: "GSAP", icon: "gsap" }]} />
           </div>
           <div
             ref={(el) => (logoRef.current[5] = el)}
-            className="group flex justify-center items-center h-[190px] w-[400px] border-zinc-300 border-2 border-t-0 border-r-0 border-b-0 z-20"
+            className="group flex justify-center items-center h-[190px] w-[400px] border-zinc-300 border-2 border-t-0 border-r-0 border-b-0 z-20 border-l-0 md:border-l-2"
           >
             <TechStackLogo stack={[{ name: "Bun", icon: "bun" }]} />
           </div>
           <div
             ref={(el) => (logoRef.current[6] = el)}
-            className="group flex justify-center items-center h-[190px] w-[400px] border-zinc-300 border-2 border-t-0 border-r-0 border-b-0 z-20"
+            className="group flex justify-center items-center h-[190px] w-[400px] border-zinc-300 border-2 border-t-0 border-r-0 border-b-0 z-20 border-l-0 md:border-l-2"
           >
             <TechStackLogo stack={[{ name: "Vercel", icon: "vercel" }]} />
           </div>
           <div
             ref={(el) => (logoRef.current[7] = el)}
-            className="group flex justify-center items-center h-[190px] w-[400px] border-zinc-300 border-2 border-t-0 border-r-0 border-b-0 z-20"
+            className="group flex justify-center items-center h-[190px] w-[400px] border-zinc-300 border-2 border-t-0 border-r-0 border-b-0 z-20 border-l-0 md:border-l-2"
           >
             <TechStackLogo stack={[{ name: "NPM", icon: "npm" }]} />
           </div>
           <div
             ref={(el) => (logoRef.current[8] = el)}
-            className="group flex justify-center items-center h-[190px] w-[400px] border-zinc-300 border-2 border-t-0 border-r-0 border-b-0 z-20"
+            className="group flex justify-center items-center h-[190px] w-[400px] border-zinc-300 border-2 border-t-0 border-r-0 border-b-0 z-20 border-l-0 md:border-l-2"
           >
             <TechStackLogo stack={[{ name: "Vite", icon: "vite" }]} />
           </div>
           <div
             ref={(el) => (logoRef.current[9] = el)}
-            className="group flex justify-center items-center h-[190px] w-[400px] border-zinc-300 border-2 border-t-0 border-b-0 z-20"
+            className="group flex justify-center items-center h-[190px] w-[400px] border-zinc-300 border-2 border-t-0 border-b-0 border-r-0 z-20 border-l-0 md:border-l-2"
           >
             <TechStackLogo stack={[{ name: "Figma", icon: "figma" }]} />
           </div>

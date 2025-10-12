@@ -104,11 +104,11 @@ const WhatIDo = () => {
 
       <div className="flex justify-center mt-5">
         <div className="relative min-h-[600px]">
-          <div className="h-[300px] w-[310px] ">
-            <img src="/img/whatido.jpeg" alt="" className="whatido-img"/>
+          <div className="h-[300px] w-[310px]">
+            <img src="/img/whatido.webp" alt="" className="whatido-img hidden lg:block"/>
           </div>
 
-          <div className="absolute font-geist-regular italic top-5 left-[340px] w-[250px]">
+          <div className="absolute font-geist-regular italic top-5 lg:left-[340px] lg:w-[250px]">
             <p
               ref={(el) => el && textRefs.current.push(el)}
               data-text="Evolving with every brief and built for impact, my process spans
@@ -117,7 +117,7 @@ const WhatIDo = () => {
             ></p>
           </div>
 
-          <div className="text-right absolute top-[125px] right-[400px] w-[250px]">
+          <div className="md:text-right absolute top-[180px] lg:top-[125px] lg:right-[400px] lg:w-[250px]">
             <h1
               className="font-geistmono-regular font-bold"
               ref={(el) => el && textRefs.current.push(el)}
@@ -132,7 +132,7 @@ const WhatIDo = () => {
             ></p>
           </div>
 
-          <div className="absolute top-[250px] left-[400px] w-[250px]">
+          <div className="absolute top-[370px] lg:top-[260px] lg:left-[400px] lg:w-[250px]">
             <h1
               className="font-geistmono-regular font-bold"
               ref={(el) => el && textRefs.current.push(el)}
@@ -147,7 +147,7 @@ const WhatIDo = () => {
             ></p>
           </div>
 
-          <div className="text-right absolute top-[380px] right-[340px] w-[250px]">
+          <div className="md:text-right absolute top-[540px] lg:top-[380px] lg:right-[340px] lg:w-[250px]">
             <h1
               className="font-geistmono-regular font-bold"
               ref={(el) => el && textRefs.current.push(el)}

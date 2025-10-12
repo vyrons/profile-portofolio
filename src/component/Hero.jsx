@@ -6,6 +6,10 @@ gsap.registerPlugin(ScrollTrigger);
 const Hero = () => {
   const heroRef = useRef(null);
   const imageRef = useRef(null);
+  const textRef = useRef(null);
+  const cardRef = useRef(null);
+
+  
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -17,12 +21,25 @@ const Hero = () => {
         ease: "power3.out",
       });
 
-      gsap.to(".marquee-text", {
-        x: "-250%",
-        duration: 10,
-        ease: "linear",
-        repeat: -1,
-      });
+      const marquee = document.querySelector(".marquee-text");
+      const wrapper = cardRef.current; // sekarang ambil dari ref kontainer hitam
+
+      if (marquee && wrapper) {
+        const marqueeWidth = marquee.scrollWidth;
+        const wrapperWidth = wrapper.offsetWidth;
+
+        gsap.fromTo(
+          marquee,
+          { x: 0 },
+          {
+            x: `-${marqueeWidth - wrapperWidth}px`,
+            duration: 12,
+            ease: "linear",
+            repeat: -1,
+          }
+        );
+      }
+
 
       gsap.set(".mask-clip-path", {
         clipPath: "polygon(0% 10%, 100% 0%, 80% 20%, 50% 50%)",
@@ -46,8 +63,23 @@ const Hero = () => {
         height: "100vh",
         borderRadius: 0,
         y: 0,
+        x: 0, // <--- penting untuk cegah geser horizontal
+        left: 0, // <--- pastikan elemen nempel kiri
+        top: 0,
+        transform: "none", // <--- reset transform jika ada sisa translate
         immediateRender: false,
       });
+
+      ScrollTrigger.create({
+        trigger: heroRef.current,
+        start: "top top",
+        end: "bottom top",
+        pin: textRef.current,
+        pinSpacing: false, // tidak menambah jarak ekstra
+        anticipatePin: 1,
+        invalidateOnRefresh: true,
+      });
+
     }, heroRef);
 
     return () => ctx.revert();
@@ -66,22 +98,24 @@ const Hero = () => {
         >
           <div className="mask-clip-path about-image hero-animate relative translate-y-[100px] z-50">
             <img
-              src="/img/hero.webp"
+              src="/img/hero3.webp"
               alt="Showcase"
-              className="hero-animate w-full h-auto object-cover"
+              className="hero-animate size-full object-cover"
             />
           </div>
         </div>
 
-        {/* Bagian teks, fixed supaya tidak bergerak */}
-        <div className="absolute top-[57vh] left-1/2 -translate-x-1/2 w-full flex flex-col items-center z-10">
-          <div className="hero-animate font-geistmono-regular flex items-center gap-24 text-sm uppercase tracking-widest text-gray-600 mb-3">
+        <div
+          ref={textRef}
+          className="absolute top-[57vh]  left-1/2 -translate-x-1/2 w-full flex flex-col items-center z-10"
+        >
+          <div className="hero-animate font-geistmono-regular flex items-center gap-16 md:gap-24 text-sm uppercase tracking-widest text-gray-600 mb-3">
             <span>A</span>
             <span className="font-bold">Seriously</span>
             <span>Good</span>
           </div>
 
-          <h1 className="hero-animate text-center font-geist-medium text-6xl md:text-8xl leading-tight">
+          <h1 className="hero-animate text-center font-geist-medium text-5xl md:text-6xl lg:text-8xl leading-tight">
             FRONTEND ENGINEER
           </h1>
 
@@ -90,10 +124,14 @@ const Hero = () => {
               ↓ Scroll for
             </span>
 
-            <div className="bg-black text-white px-6 py-3 rounded-2xl flex items-center gap-4 flex-1 max-w-md mx-auto mb-5">
-              <div className="rounded-2xl size-12">
+            <div
+              ref={cardRef}
+              className="bg-black text-white flex items-center gap-4 rounded-3xl px-4 py-3 
+                max-w-[100%] sm:max-w-[500px] lg:max-w-[420px] h-15 mx-auto overflow-hidden"
+            >
+              <div className="rounded-2xl size-12 flex-shrink-0">
                 <img
-                  src="/img/profile.jpg"
+                  src="/img/profile.webp"
                   alt="Profile"
                   className="w-full h-full object-cover rounded-2xl"
                 />
@@ -102,14 +140,16 @@ const Hero = () => {
               <div>
                 <p className="font-geist-regular">Ryan Rafidhea Reyhan</p>
 
-                <div className="relative w-72 overflow-hidden">
-                  <div className="marquee-text whitespace-nowrap font-geist-regular text-gray-400 text-sm">
-                    <p>
-                      Software Engineer Student, Rookie Frontend Engineer,
-                      Newbie Design Engineer, React js Enthusiast &nbsp; •
-                      &nbsp; Software Engineer Student, Rookie Frontend
-                      Engineer, Newbie Design Engineer, React js Enthusiast
-                    </p>
+                <div className="relative flex-grow overflow-hidden max-w-full">
+                  <div className="marquee-wrapper relative w-full overflow-hidden">
+                    <div className="marquee-text inline-block min-w-max whitespace-nowrap font-geist-regular text-gray-400 text-sm pr-[16px] md:pr-[32px]">
+                      <p>
+                        Software Engineer Student, Rookie Frontend Engineer,
+                        Newbie Design Engineer, React js Enthusiast &nbsp; •
+                        &nbsp; Software Engineer Student, Rookie Frontend
+                        Engineer, Newbie Design Engineer, React js Enthusiast
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
